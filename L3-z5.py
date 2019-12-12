@@ -20,7 +20,7 @@ def digit_sum(num):
 
 ex, s = 1, 0
 while ex != 0:
-    num = [False if n.isalpha() else int(n) for n in input('Введите числа через пробел или любую букву для выхода: ').split()]
+    num = [int(n) if n.isdigit() else False for n in input('Введите числа через пробел, любую букву или символ для выхода: ').split()]
     s += digit_sum(num)
     print(s)
 
