@@ -4,7 +4,7 @@
 
 
 def my_func(x, y, z):
-    return max(x, y) + max(y, z)
+    return max((x+y), (y+z), (x+z))
 
 
 a = 13
