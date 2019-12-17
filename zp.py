@@ -4,19 +4,15 @@
 Для выполнения расчета для конкретных значений необходимо запускать скрипт с параметрами.
 '''
 from sys import argv
-hours = argv[1]
-rate = argv[2]
-percent = argv[3]
 
-def pay(hours, rate, percent):
-    try:
-        #hours = int(input('Выработка в часах: '))
-        #rate = int(input('Cтавка работника в час: '))
-        bonus = (hours * rate) * percent/100
-        salary = hours * rate + bonus
-        return f'{salary:.2f} rub'
-    except ValueError:
-        return f'Только числа! '
+try:
+    hours = int(argv[1])
+    rate = int(argv[2])
+    percent = int(argv[3])
 
-#if __name__ == '__main__':
-    #print(pay())
+    bonus = (hours * rate) * percent/100
+    salary = hours * rate + bonus
+    print(f'{salary:.2f} rub')
+except ValueError:
+    print(f'Только числа! ')
+
