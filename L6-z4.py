@@ -59,6 +59,7 @@ class Car:
                 elif direction[key] == 'Slow':  # s  Замедление
                     if Car.boost == 0:
                         print('Stopped')
+                        Car.stop(self)
                     elif Car.boost > 0:
                         Car.boost -= 1
                         Car.show_speed(self, reverse=True, R=0)
